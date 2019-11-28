@@ -95,17 +95,17 @@
         padding: 1rem;
     }
 
-    .footer > .content p.made-with {
+    .footer > .content .made-with {
         vertical-align: middle;
     }
 
-    .footer > .content p.made-with > a {
+    .footer > .content .made-with > a {
         vertical-align: middle;
         line-height: 24px;
         font-size: 12px;
     }
 
-    .footer > .content p.made-with > a {
+    .footer > .content .made-with > a {
         vertical-align: middle;
         line-height: 24px;
         font-size: 12px;
@@ -170,7 +170,7 @@
                 <p>
                     <strong>CSS Versicherung @ IT-Day Zürich 2019</strong> - Blockly UI by <a href="mailto:christian.scharr@css.ch">Christian Scharr</a>.
                 </p>
-                <p class="made-with">
+                <div class="made-with">
                     <span>Made with <i class="fas fa-heart" style="color: #F03A5F;"></i> and </span>
                     <a href="https://svelte.dev/" target="_blank" title="Svelte">
                         <div class="svelte-logo"></div>
@@ -183,7 +183,7 @@
                     <a href="https://developers.google.com/blockly" target="_blank" title="Blockly">
                         <div class="blockly-logo"></div>
                     </a>
-                </p>
+                </div>
             </div>
         </footer>
     </div>
