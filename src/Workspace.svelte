@@ -107,14 +107,25 @@
 </script>
 
 <style>
+    .main {
+        background-color: #ffffff;
+        padding: 1rem;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+    }
+
     #defaultWorkspace {
         display: none;
         visibility: hidden;
     }
 
     #blocklyDiv {
-        height: 620px;
-        width: 1000px;
+        height: 650px;
+        width: 100%;
     }
 
     #toolbox {
@@ -132,54 +143,56 @@
     }
 </style>
 
-<div id="blocklyDiv" bind:this={blocklyDiv}></div>
-<div class="level" id="footer">
-    <div class="level-left">
-        <label for="team">Team:</label>
-		<div class="control has-icons-left">
-			<input id="team" class="input" type="text" placeholder="Teamname" bind:value={team}/>
-			<span class="icon is-small is-left">
+<div class="container main">
+    <div id="blocklyDiv" bind:this={blocklyDiv}></div>
+    <div class="level" id="footer">
+        <div class="level-left">
+            <label for="team">Team:</label>
+            <div class="control has-icons-left">
+                <input id="team" class="input" type="text" placeholder="Teamname" bind:value={team}/>
+                <span class="icon is-small is-left">
 				<i class="fas fa-users"></i>
 			</span>
-		</div>
-        <label for="team">Sprint:</label>
-        <div class="control has-icons-left">
-            <select class="input" bind:value={sprintSelected}>
-                <option value="sprint-2">Sprint 2</option>
-                <option value="sprint-3">Sprint 3</option>
-                <option value="sprint-4">Sprint 4</option>
-            </select>
-            <span class="icon is-small is-left">
+            </div>
+            <label for="team">Sprint:</label>
+            <div class="control has-icons-left">
+                <select class="input" bind:value={sprintSelected}>
+                    <option value="sprint-2">Sprint 2</option>
+                    <option value="sprint-3">Sprint 3</option>
+                    <option value="sprint-4">Sprint 4</option>
+                </select>
+                <span class="icon is-small is-left">
 				<i class="fas fa-briefcase"></i>
 			</span>
+            </div>
         </div>
-    </div>
-    <div class="level-right" id="footer-right">
-        <div class="field has-addons">
-            <p class="control">
-                <button class="button is-info" on:click={onSave}>
+        <div class="level-right" id="footer-right">
+            <div class="field has-addons">
+                <p class="control">
+                    <button class="button is-info" on:click={onSave}>
                     <span class="icon is-small">
                         <i class="fas fa-save"></i>
                     </span>
-                    <span>Speichern</span>
-                </button>
-            </p>
-            <p class="control">
-                <button class="button" on:click={onLoad}>
+                        <span>Speichern</span>
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button" on:click={onLoad}>
                     <span class="icon is-small">
                         <i class="fas fa-file-upload"></i>
                     </span>
-                    <span>Letzten Speicherpunkt laden</span>
-                </button>
-            </p>
-            <p class="control">
-                <button class="button is-danger is-light" on:click={onClear}>
+                        <span>Letzten Speicherpunkt laden</span>
+                    </button>
+                </p>
+                <p class="control">
+                    <button class="button is-danger is-light" on:click={onClear}>
                     <span class="icon is-small">
                         <i class="fas fa-trash"></i>
                     </span>
-                    <span>Leeren</span>
-                </button>
-            </p>
+                        <span>Leeren</span>
+                    </button>
+                </p>
+            </div>
         </div>
     </div>
 </div>
