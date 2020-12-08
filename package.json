@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "rxjs": "6.5.3",
-    "sirv-cli": "0.4.5"
+    "sirv-cli": "1.0.10"
   },
   "scripts": {
     "build": "rollup -c",
